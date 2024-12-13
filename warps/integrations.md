@@ -1,10 +1,16 @@
 # Integrate Warps
 
+The primary objective of clients is to bring Warps closer to the end user and minimize friction in the user experience.
+
+To achieve this, we recommend adding support for as many of the following features as you deem relevant and useful:
+
+## Link Detection in URLs
+
 Client applications can accept encoded Warp identifiers or aliases through the query parameter `warp`.
 
 The URL-encoded value of the `warp` parameter is typically prefixed with the identifier type (`alias:`, `hash:`), defaulting to `alias:` if no type is specified.
 
-## Identifier Types
+### Identifier Types
 
 - **`alias:`** - Use this prefix for alias identifiers.
 - **`hash:`** - Use this prefix for transaction hash identifiers.
@@ -16,7 +22,7 @@ Super Clients are similar to other clients but accept Warp identifiers directly 
 
 You can propose to register your Super Client by submitting the URL of your web app via a pull request.
 
-## Examples
+### Examples
 
 - **Using `hash` prefix**:
   `https://yourapp.com?warp=hash%3Ad08a405f6d11b5506889bf6cd822fec2a8ef826c170fd1920ff5241f3883adb9`
@@ -37,21 +43,23 @@ Warps can also be integrated into other clients like wallets:
 - **[xPortal](https://xportal.com)**: Accepts links like `https://xportal.com?warp=delegate` to display a UI in-app.
 - **[MultiversX Browser Extension](https://chromewebstore.google.com/detail/multiversx-wallet/dngmlblcodfobpdpecaadgfbcggfjfnm)**: Unwraps Warp links shared on X.com and injects a UI with on-chain actions directly within posts.
 
-## Features to Integrate
-
-The primary objective of clients is to bring Warps closer to the end user and minimize friction in the user experience. To achieve this, we recommend adding support for as many of the following features as you deem relevant and useful:
-
-### Link Detection
-
-User-generated content should be continuously screened for valid Warp Links of any kind, including Warp Links from [Super Clients](#super-clients).
-
-Our [TypeScript SDK](./sdks.md#typescript) includes utilities that handle link detection for you:
+Our [TypeScript SDK](./sdks.md#typescript) includes utilities that handle link detection in URLs for you:
 
 ```typescript
 // TODO
 ```
 
-### Unwrapping Warps
+## Link Detection in User Content
+
+User-generated content should be continuously screened for valid Warp Links of any kind, including Warp Links from [Super Clients](#super-clients).
+
+Our [TypeScript SDK](./sdks.md#typescript) includes utilities that handle link detection in HTML content for you:
+
+```typescript
+// TODO
+```
+
+## Unwrapping Warps
 
 Warps can be sent anywhere on the internet. To reduce user friction, we strongly recommend unwrapping Warps within your client. Unwrapping involves using a Warp Link to fetch complete Warp information from the blockchain and replacing the link with an injected UI to represent the Warp and perform actions directly within your client.
 
@@ -62,7 +70,7 @@ Use the following utilities from our TypeScript SDK to simplify the integration 
 // TODO
 ```
 
-### Settings Toggle
+## Settings Toggle
 
 While Warp Unwrapping significantly enhances the user experience, not all users may prefer it. Therefore, we recommend adding a toggle in your application settings to allow users to turn off unwrapping of Warp links.
 
