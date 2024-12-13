@@ -12,7 +12,7 @@ The URL-encoded value of the `warp` parameter is typically prefixed with the ide
 
 ### Super Clients
 
-Super Clients are similar to other clients but accept Warp identifiers directly within the URL path for cleaner URLs. For example: `usewarp.to/<warp-id>`.
+Super Clients are similar to other clients but accept Warp identifiers directly within the URL path for cleaner URLs. For example: `usewarp.to/create-token`, where `create-token` represents the Warp identifier.
 
 You can propose to register your Super Client by submitting the URL of your web app via a pull request.
 
