@@ -1,6 +1,8 @@
 # Integrate Warps
 
-Client applications can accept encoded Warp identifiers or aliases through the query parameter `warp`. The urlencoded value of the `warp` parameter is typically prefixed with the identifier type (`alias:`, `hash:`), defaulting to `alias:` if no type is specified.
+Client applications can accept encoded Warp identifiers or aliases through the query parameter `warp`.
+
+The URL-encoded value of the `warp` parameter is typically prefixed with the identifier type (`alias:`, `hash:`), defaulting to `alias:` if no type is specified.
 
 ## Identifier Types
 
@@ -10,31 +12,58 @@ Client applications can accept encoded Warp identifiers or aliases through the q
 
 ### Super Clients
 
-Super Clients are equal to any other client but they accept Warp identifiers directly within the URL path for even cleaner-looking URLs. One such example is `usewarp.to/<warp-id>`.
+Super Clients are similar to other clients but accept Warp identifiers directly within the URL path for cleaner URLs. For example: `usewarp.to/<warp-id>`.
 
-You can propose to register your Super Client by submitting the URL of your web app to configuration via a pull request.
+You can propose to register your Super Client by submitting the URL of your web app via a pull request.
 
 ## Examples
 
-- **Using `hash` prefix**: `https://yourapp.com?warp=hash%3Ad08a405f6d11b5506889bf6cd822fec2a8ef826c170fd1920ff5241f3883adb9`
+- **Using `hash` prefix**:
+  `https://yourapp.com?warp=hash%3Ad08a405f6d11b5506889bf6cd822fec2a8ef826c170fd1920ff5241f3883adb9`
 
-- **Using `alias` prefix**: `https://yourapp.com?warp=alias%3Amyalia`
+- **Using `alias` prefix**:
+  `https://yourapp.com?warp=alias%3Amyalias`
 
-- **No prefix (defaults to `alias`)**: `https://yourapp.com?warp=myalias`
+- **No prefix (defaults to `alias`)**:
+  `https://yourapp.com?warp=myalias`
 
-With the identifier information, clients then fetch Warp information from the blockchain and generate a UI with actions based on the parameters. When a user clicks an action, the client reacts based on the Action Type. For transactions, it constructs the transaction based on defined parameters and prompts the user to sign and broadcast it to the blockchain network.
+Clients fetch Warp information from the blockchain using the identifier and generate a UI with actions based on the parameters. When a user clicks an action, the client responds based on the Action Type. For transactions, it constructs the transaction based on defined parameters and prompts the user to sign and broadcast it to the blockchain network.
 
-A simple default client will be provided as part of the development of this protocol / standard. For example: `https://usewarp.to?warp=<your-warp-id>`
+vLeap provides an advanced full-featured default client called `UseWarp`:
+`https://usewarp.to?warp=<your-warp-id>`
 
-But Warps may be easily integrated into other clients like wallets too:
+Warps can also be integrated into other clients like wallets:
 
-- [xPortal](https://xportal.com): e.g. accept `https://xportal.com?warp=delegate` to display a UI in-app
-- [Multiversᕽ Browser Extension](https://chromewebstore.google.com/detail/multiversx-wallet/dngmlblcodfobpdpecaadgfbcggfjfnm): e.g. to unwrap Warp links shared on X.com and inject a generate UI with on-chain actions directly within Posts
+- **[xPortal](https://xportal.com)**: Accepts links like `https://xportal.com?warp=delegate` to display a UI in-app.
+- **[MultiversX Browser Extension](https://chromewebstore.google.com/detail/multiversx-wallet/dngmlblcodfobpdpecaadgfbcggfjfnm)**: Unwraps Warp links shared on X.com and injects a UI with on-chain actions directly within posts.
 
-## Features to Support
+## Features to Integrate
 
-The primary objective of clients is to bring Warps closer to the end user and remove maximum friction in user experience. To achieve this, we recommend adding support for as many of the following features as you deem relevant and useful:
+The primary objective of clients is to bring Warps closer to the end user and minimize friction in the user experience. To achieve this, we recommend adding support for as many of the following features as you deem relevant and useful:
 
 ### Link Detection
 
-User-generated content should be continiously screened for valid Warp Links of any kind. This includes Warp Links from Super-Clients
+User-generated content should be continuously screened for valid Warp Links of any kind, including Warp Links from [Super Clients](#super-clients).
+
+Our [TypeScript SDK](./sdks.md#typescript) includes utilities that handle link detection for you:
+
+```typescript
+// TODO
+```
+
+### Unwrapping Warps
+
+Warps can be sent anywhere on the internet. To reduce user friction, we strongly recommend unwrapping Warps within your client. Unwrapping involves using a Warp Link to fetch complete Warp information from the blockchain and replacing the link with an injected UI to represent the Warp and perform actions directly within your client.
+
+If your client is a wallet, ensure that you handle any transactions emitted from Warp actions of type contract.
+Use the following utilities from our TypeScript SDK to simplify the integration process:
+
+```typescript
+// TODO
+```
+
+### Settings Toggle
+
+While Warp Unwrapping significantly enhances the user experience, not all users may prefer it. Therefore, we recommend adding a toggle in your application settings to allow users to turn off unwrapping of Warp links.
+
+If your client is a browser extension, consider providing this setting toggle per visited site.
