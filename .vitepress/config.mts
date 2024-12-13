@@ -20,7 +20,10 @@ export default defineConfig({
       {
         text: 'Warps',
         items: [
-          { text: 'General', link: '/warps/intro.md' },
+          { text: 'General', link: '/warps/general.md' },
+          { text: 'Specifications', link: '/warps/specifications.md' },
+          { text: 'Registry', link: '/warps/registry.md' },
+          { text: 'Integrations', link: '/warps/integrations.md' },
           { text: 'SDKs', link: '/warps/sdks.md' },
         ],
       },
