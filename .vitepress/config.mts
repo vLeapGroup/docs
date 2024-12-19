@@ -25,6 +25,7 @@ export default defineConfig({
           { text: 'Registry', link: '/warps/registry.md' },
           { text: 'Integrations', link: '/warps/integrations.md' },
           { text: 'SDKs', link: '/warps/sdks.md' },
+          { text: 'Warps vs. Blinks', link: '/warps/comparison.md' },
         ],
       },
     ],
