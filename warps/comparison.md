@@ -9,3 +9,5 @@ Warps are a revolutionary protocol on the Multiversᕽ blockchain built from the
 - **Free Forever**: Enjoy using Warps without the burden of monthly server costs, unlike Blinks.
 - **Developer-Friendly**: Utilize standardized JSON structures for quick and easy creation and manipulation of Warps.
 - **Enhanced Functionality**: Think of MultiversX Warps as a combination of Solana Actions and Blinks.
+
+![Blink Comparison](./blinks-comparison.png)
