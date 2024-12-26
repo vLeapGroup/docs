@@ -13,7 +13,7 @@ Public Endpoints:
 
 Views:
 
-- Retrieve all registered Warps by user: `getUserWarps(address) -> WarpInfo`
+- Retrieve all registered Warps by user: `getUserWarps(address) -> WarpInfo[]`
 - Retrieve Warp info by alias: `getInfoByAlias(alias) -> WarpInfo`
 - Retrieve Warp info by hash: `getInfoByHash(hash) -> WarpInfo`
 
