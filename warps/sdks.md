@@ -1,6 +1,6 @@
 # SDKs for Warps
 
-Warps come with SDKs for serveral languages to help you integrate them with minimal efforts:
+Warps come with SDKs for several languages to help you integrate them with minimal efforts:
 
 ## Typescript
 
