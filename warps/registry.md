@@ -8,6 +8,7 @@ Public Endpoints:
 
 - Register Warp: `registerWarp@<warp-hash>@<optional-alias>@<optional-brand-hash>`
 - Unregister Warp: `unregisterWarp@<warp-hash>`
+- Upgrade Warp: `upgradeWarp@<alias>@<new-warp-hash>`
 - Set Warp Alias: `setWarpAlias@<warp-hash>@<alias>`
 - Publish Warp to Gallery: `publishWarp@<warp-hash>`
 
