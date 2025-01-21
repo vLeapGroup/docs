@@ -54,7 +54,68 @@ Creates a button linking to any web resource, including other Warps:
 
 ## Argument and Input Types
 
-Warps utilize an advanced typing system for arguments and inputs.
+Warps utilize an advanced typing system for arguments and inputs. Type hints are provided as prefix in the form `type:value` and are required for all arguments in the `args` array.
+
+## Argument and Input Types
+
+Warps utilize an advanced typing system for both arguments and inputs, allowing for flexibility and precision in smart contract interactions. Below are the base types available, along with descriptions and examples for nested types.
+
+### Base Types
+
+- **`string`**: Represents a sequence of characters. Example: `string:hello`
+- **`uint8`**: An 8-bit unsigned integer. Example: `uint8:255`
+- **`uint16`**: A 16-bit unsigned integer. Example: `uint16:789`
+- **`uint32`**: A 32-bit unsigned integer. Example: `uint32:456`
+- **`uint64`**: A 64-bit unsigned integer, suitable for larger numbers. Example: `uint64:1234567890`
+- **`biguint`**: An arbitrarily large unsigned integer. Example: `biguint:123456789012345678901234567890`
+- **`bool`**: A boolean value, either `true` or `false`. Example: `bool:true`
+- **`address`**: Represents a blockchain address. Example: `address:erd1qqqqqqqqqqqqqqqpqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqplllst77y4l`
+- **`token`**: Represents a token identifier. Example: `token:TOKEN-123456`
+- **`codemeta`**: Metadata for smart contract deployments, typically in hexadecimal. Example: `codemeta:0106`
+- **`hex`**: A hexadecimal encoded string. Example: `hex:1234`
+- **`esdt`**: Represents an ESDT (eStandard Digital Token) transfer in the form of `token|nonce|amount`. Example: `esdt:AAA-123456|5|100`
+
+### Input Types Only
+
+- **`nft`**: Displays an NFT selector to the user and is treated as `esdt`.
+
+### Nested Types
+
+The base types can be combined and nested with the following variations:
+
+#### Option
+
+An `option` type can either contain a value or be empty. It is useful for optional fields.
+
+- **Example with value**: `option:string:hello`
+- **Example without value**: `option:string`
+
+#### Optional
+
+Similar to `option`, but specifically used for fields that might not be provided.
+
+- **Example with value**: `optional:string:hello`
+- **Example without value**: `optional:string`
+
+#### List
+
+A `list` type holds multiple values of the same type, separated by commas.
+
+- **Example with values**: `list:string:hello,world`
+- **Example without values**: `list:string:`
+
+#### Variadic
+
+A `variadic` type allows for a variable number of arguments, often used for functions that can take multiple inputs.
+
+- **Example of uint64**: `variadic:uint64:123,456,789`
+- **Example of composite**: `variadic:composite:string|uint64:abc|123,def|456,ghi|789`
+
+#### Composite
+
+A `composite` type combines multiple different types into a single value, allowing for complex data structures.
+
+- **Example**: `composite:string|uint64:hello|123`
 
 ## User Inputs
 
