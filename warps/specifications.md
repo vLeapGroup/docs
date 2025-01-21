@@ -54,10 +54,6 @@ Creates a button linking to any web resource, including other Warps:
 
 ## Argument and Input Types
 
-Warps utilize an advanced typing system for arguments and inputs. Type hints are provided as prefix in the form `type:value` and are required for all arguments in the `args` array.
-
-## Argument and Input Types
-
 Warps utilize an advanced typing system for both arguments and inputs, allowing for flexibility and precision in smart contract interactions. Below are the base types available, along with descriptions and examples for nested types.
 
 ### Base Types
