@@ -105,13 +105,13 @@ A `list` type holds multiple values of the same type, separated by commas.
 A `variadic` type allows for a variable number of arguments, often used for functions that can take multiple inputs.
 
 - **Example of uint64**: `variadic:uint64:123,456,789`
-- **Example of composite**: `variadic:composite:string|uint64:abc|123,def|456,ghi|789`
+- **Example of composite**: `variadic:composite(string|uint64):abc|123,def|456,ghi|789`
 
 #### Composite
 
 A `composite` type combines multiple different types into a single value, allowing for complex data structures.
 
-- **Example**: `composite:string|uint64:hello|123`
+- **Example**: `composite(string|uint64):hello|123`
 
 ## User Inputs
 
