@@ -19,3 +19,15 @@ const index = new WarpIndex({
 
 const hits = await index.search('your search term')
 ```
+
+# First-Party Service
+
+vLeap is hosting an early stage Warp Index available with the following configuration:
+
+```ts
+const index = new WarpIndex({
+  indexUrl: 'https://warp-index.vleap.io',
+})
+```
+
+It currently does not require API keys or enforce strict rate limits, but this may change in the future. To stay updated on potential changes, reach out to us on [Telegram](https://telegram.vleap.io).
