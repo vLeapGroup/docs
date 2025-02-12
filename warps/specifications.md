@@ -44,6 +44,19 @@ Fetches results from a smart contract view function:
 - **`args`**: Fixed set of typed arguments for the query.
 - **`inputs`**: User-defined inputs for positional `args`.
 
+### Data Collection
+
+Collect data from the user and send it to a defined destination (HTTP endpoint, ...):
+
+- **`type`**: `collect`
+- **`label`**: Text displayed on the action button.
+- **`destination`**: Text displayed on the action button.
+  - **`url`**: Your custom HTTP endpoint
+  - **`method`**: HTTP method Example: `GET`, `POST`
+  - **`headers`**: Key-value pairs of HTTP headers.
+- **`inputs`**: User-defined inputs which will be sent to `destination`.
+  - **Example**: `{ "inputs": { "a": 1, "b": 2 } }`
+
 ### Link
 
 Creates a button linking to any web resource, including other Warps:
