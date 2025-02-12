@@ -221,6 +221,57 @@ A variable can be populated dynamically from a query parameter in the URL.
 
 In this example, `USER_ADDRESS` will be populated from the address query parameter in the URL (`?address=erd1...`).
 
+## Bot Metadata
+
+The `bot` field provides additional information intended for AI agents or other automated systems. It is hidden from the user and does not affect the Warp’s UI or behavior.
+
+This field can be used in two places:
+
+1. **At the Warp Root** – Provides a general description of the Warp for AI agents.
+2. **Inside Inputs** – Helps AI understand how to process and interpret user inputs.
+
+---
+
+### 1. Warp-Level `bot` Field
+
+At the root level, `bot` can describe the overall purpose of the Warp in a way that AI systems can interpret.
+
+##### Example:
+
+```json
+{
+  "protocol": "warp:0.4.0",
+  "name": "JoAi: User Onboarding",
+  "bot": "This Warp is designed to onboard new JoAi users by collecting essential information.",
+  "actions": [...]
+}
+```
+
+### 2. Input-Level bot Field
+
+Within inputs, bot provides AI-specific instructions on handling user-provided data.
+
+```json
+{
+  "name": "User Name",
+  "bot": "The user's name for further identification.",
+  "type": "string",
+  "required": true
+}
+```
+
+Another example with more context:
+
+```json
+{
+  "name": "Source",
+  "bot": "How the user discovered JoAi. Give examples like Google search, friend recommendation, blog post, etc.",
+  "type": "string"
+}
+```
+
+By using `bot` in these specific locations, AI agents can better understand the intent behind a Warp and how to handle user inputs efficiently.
+
 ## Next Step
 
 A Warp can specify a follow-up action using the `next` field, which can contain another Warp ID or a URL for redirection. This field can be defined globally or per action.
