@@ -163,6 +163,64 @@ Define custom user inputs for actions:
 - **`min`**: Minimum value or length.
 - **`max`**: Maximum value or length.
 
+## Variables
+
+To make your Warps more flexible and adaptive, you can use variables via the `vars` field in the root of your Warp:
+
+```json
+{
+  "vars": {
+    "MY_VARIABLE": "value"
+  }
+}
+```
+
+Once defined, you can then use the `MY_VARIABLE` **anywhere** inside the Warp contents using `{{MY_VARIABLE}}`. Example:
+
+```json
+{
+  "vars": {
+    "EGLD_VALUE": "1000000000000000000",
+    "ANY_ARG": "first-arg"
+  },
+  "actions": [
+    {
+      "type": "contract",
+      "func": "pay",
+      "value": "{{EGLD_VALUE}}",
+      "args": ["string:{{ANY_ARG}}"]
+    }
+  ]
+}
+```
+
+Variables can be set once and reused multiple times.
+
+### Dynamic Variables from External Sources
+
+Variables can also be dynamically set based on external sources, allowing Warps to adapt to different environments and user inputs.
+
+#### From URL Query Parameters
+
+A variable can be populated dynamically from a query parameter in the URL.
+
+```json
+{
+  "vars": {
+    "USER_ADDRESS": "query:address"
+  },
+  "actions": [
+    {
+      "type": "contract",
+      "func": "register",
+      "args": ["address:{{USER_ADDRESS}}"]
+    }
+  ]
+}
+```
+
+In this example, `USER_ADDRESS` will be populated from the address query parameter in the URL (`?address=erd1...`).
+
 ## Next Step
 
 A Warp can specify a follow-up action using the `next` field, which can contain another Warp ID or a URL for redirection. This field can be defined globally or per action.
