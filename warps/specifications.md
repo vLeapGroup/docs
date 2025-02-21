@@ -175,7 +175,7 @@ To make your Warps more flexible and adaptive, you can use variables via the `va
 }
 ```
 
-Once defined, you can then use the `MY_VARIABLE` **anywhere** inside the Warp contents using `{{MY_VARIABLE}}`. Example:
+Once defined, you can then use the `MY_VARIABLE` **anywhere** inside the Warp contents:
 
 ```json
 {
