@@ -1,4 +1,4 @@
-# The Index
+# The Search Index
 
 The Warp Index is an off-chain service that provides powerful search capabilities for Warps registered in the registry. It continuously synchronizes with the registry to maintain an up-to-date searchable database of all registered Warps.
 
