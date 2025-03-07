@@ -4,10 +4,16 @@ Warps are on-chain data structures that provide all necessary information to con
 
 Warps can be shared through any medium capable of encoding or displaying URLs, including web platforms, QR codes, NFC tags, etc.
 
+You can create Warps using the UseWarp default client at [usewarp.to/create](https://usewarp.to/create).
+
 ## Learn from Videos
 
-If you prefer to learn from videos, watch the Warp Dev Series on YouTube: [Warp Dev Series](https://www.youtube.com/watch?v=_FLahYKlIJk)
+If you prefer to learn from videos, watch the Warp Dev Series on YouTube: [Warp Dev Series](https://www.youtube.com/watch?v=_FLahYKlIJk).
+
+## Examples
+
+We host a wide range of Warp examples (Blueprints) on GitHub in the [specifications repository](https://github.com/vLeapGroup/warps-specs/tree/main/examples). You can also explore Warps on usewarp.to and find their Blueprints via the "Inspect" button.
 
 ## Join us on Telegram
 
-Join our Telegram community for support and discussions: [https://telegram.usewarp.to](https://telegram.usewarp.to)
+Join our Telegram community for support and discussions: [https://telegram.usewarp.to](https://telegram.usewarp.to).
