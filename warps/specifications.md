@@ -42,6 +42,7 @@ Fetches results from a smart contract view function:
 - **`address`**: Smart contract address.
 - **`func`**: Function to call in the smart contract.
 - **`args`**: Fixed set of typed arguments for the query.
+- **`abi`**: URL to the ABI file. Needed if contract is not verified on Explorer.
 - **`inputs`**: User-defined inputs for positional `args`.
 
 ### Data Collection
