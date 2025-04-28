@@ -17,6 +17,7 @@ Views:
 - Retrieve all registered Warps by user: `getUserWarps(address) -> WarpInfo[]`
 - Retrieve Warp info by alias: `getInfoByAlias(alias) -> WarpInfo`
 - Retrieve Warp info by hash: `getInfoByHash(hash) -> WarpInfo`
+- Retrieve configuration of a whitelisted [LightSpeed Chain]: `getChain(name, environment) -> ChainInfo`
 
 Find the type definitions in the GitHub repository.
 

@@ -24,6 +24,7 @@ export default defineConfig({
           { text: 'Specifications', link: '/warps/specifications.md' },
           { text: 'Registry', link: '/warps/registry.md' },
           { text: 'Search Index', link: '/warps/search-index.md' },
+          { text: 'Chains', link: '/warps/chains.md' },
           { text: 'Integrations', link: '/warps/integrations.md' },
           { text: 'SDKs', link: '/warps/sdks.md' },
           { text: 'Warps vs. Blinks', link: '/warps/comparison.md' },
