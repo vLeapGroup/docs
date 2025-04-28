@@ -1,8 +1,8 @@
 # LightSpeed Chains
 
-LightSpeed Chains, previously known as Sovereign Chains, empower developers to launch and interact with custom blockchains that seamlessly connect to the MultiversX main network. These app-specific chains offer enhanced performance, flexibility, and interoperability while leveraging the MultiversX ecosystem's infrastructure.
+LightSpeed Chains, formerly Sovereign Chains, enable developers to create custom blockchains that connect seamlessly to the MultiversX main network, offering more flexibility.
 
-Warps, which are inscribed and registered on the MultiversX main network, can be executed across any whitelisted LightSpeed Chain when specified in the action configuration. Whitelisted LightSpeed Chains and their configurations are managed through the [Registry](./registry.md).
+Warps are inscribed and registered on the main network and can be executed on whitelisted LightSpeed Chains if specified in the action. Whitelisted chains and their configurations are managed in the [Registry](./registry.md).
 
 ##
 
