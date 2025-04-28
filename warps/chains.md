@@ -4,7 +4,7 @@ LightSpeed Chains, formerly Sovereign Chains, enable developers to create custom
 
 Warps are inscribed and registered on the main network and can be executed on whitelisted LightSpeed Chains if specified in the action. Whitelisted chains and their configurations are managed in the [Registry](./registry.md).
 
-##
+---
 
 The `chain` parameter allows developers to target a specific LightSpeed Chain for individual Warp actions of type `transfer`, `contract`, or `query`. If omitted, the action defaults to the MultiversX main chain.
 
