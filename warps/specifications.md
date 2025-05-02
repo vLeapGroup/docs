@@ -135,6 +135,7 @@ User-defined inputs allow customization of smart contract calls and queries. Inp
 
 - **`field`**: Value from a user-generated text input field.
 - **`query`**: Value from a URL query parameter.
+- **`user_wallet`**: The wallet address of the connected user wallet.
 
 ### Positions
 
