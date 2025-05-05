@@ -274,6 +274,87 @@ Another example with more context:
 
 By using `bot` in these specific locations, AI agents can better understand the intent behind a Warp and how to handle user inputs efficiently.
 
+---
+
+## Results
+
+Results define how to extract and reference data returned by a Warp execution. This includes responses from `contract`, `query`, or `collect` actions.
+
+Declare a `results` object at the root level of the Warp. Each key represents a named result, and the value is a resolution path using dot notation.
+
+```json
+{
+  "results": {
+    // Extracts the first return value from the contract call
+    "RAFFLE_ID": "out.1",
+
+    // Extracts the second argument from the event named 'raffleCreated'
+    "RAFFLE_ID_FROM_EVENT": "event.raffleCreated.2",
+
+    // Extracts the third output from a query
+    "STAKE_AMOUNT": "out.3",
+
+    // Extracts a nested field from an HTTP response
+    "USER_ID": "out.data.userId"
+  }
+}
+```
+
+Use the following prefixes:
+
+- **`out`** – For smart contract output or HTTP response data.
+- **`event`** – For smart contract event arguments.
+
+Indexing starts from 1. Use dot notation to access nested values.
+
+---
+
+## Messages
+
+Messages provide user-facing feedback after Warp execution. Define them using a `messages` object at the root level.
+
+You can insert values dynamically using `{{RESULT_NAME}}` syntax.
+
+```json
+{
+  "messages": {
+    // Shown on success
+    "success": "Raffle with ID {{RAFFLE_ID}} created successfully.",
+
+    // Shown on failure
+    "error": "Something went wrong. Please try again.",
+
+    // Custom message (optional)
+    "custom": "Your stake of {{STAKE_AMOUNT}} EGLD has been recorded."
+  }
+}
+```
+
+### Reserved Keys
+
+- **`success`** – Displayed when the Warp executes successfully.
+- **`error`** – Displayed when the Warp execution fails.
+- **`bot`** – Hidden message for AI systems (optional).
+
+Messages help deliver a smooth user experience with dynamic content.
+
+---
+
 ## Next Step
 
-A Warp can specify a follow-up action using the `next` field, which can contain another Warp ID or a URL for redirection. This field can be defined globally or per action.
+The `next` field defines what happens after a Warp finishes. It can be a Warp ID or an external URL.
+
+You can inject [Results](#results) into the next step as query parameters:
+
+```json
+{
+  // Navigates to another Warp with a dynamic query param
+  "next": "next-warp-id?raffle_id={{RAFFLE_ID}}"
+}
+```
+
+This allows chaining Warps or redirecting users based on execution results.
+
+You can define `next` at the root level or override it inside specific actions.
+
+---
