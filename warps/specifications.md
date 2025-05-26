@@ -223,6 +223,32 @@ A variable can be populated dynamically from a query parameter in the URL.
 
 In this example, `USER_ADDRESS` will be populated from the address query parameter in the URL (`?address=erd1...`).
 
+## Globals
+
+Globals are pre-defined, globally available constants that can be used similarly to [variables](#variables) without needing to define them. They are accessible anywhere within a Warp.
+
+The following globals are available:
+
+- **`USER_WALLET`**: The wallet address of the currently connected user.
+- **`CHAIN_API`**: The blockchain API URL fetched from the registry, based on the blockchain specified in the action via `chain`.
+- **`CHAIN_EXPLORER`**: The blockchain Explorer URL fetched from the registry, based on the blockchain specified in the action via `chain`.
+
+##### Usage Example:
+
+```json
+{
+  "actions": [
+    {
+      "type": "contract",
+      "func": "register",
+      "args": ["address:{{USER_WALLET}}"],
+      "chain": "multiversx",
+      "endpoint": "{{CHAIN_API}}/transaction"
+    }
+  ]
+}
+```
+
 ## Bot Metadata
 
 The `bot` field provides additional information intended for AI agents or other automated systems. It is hidden from the user and does not affect the Warp’s UI or behavior.
