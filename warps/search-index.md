@@ -26,8 +26,8 @@ vLeap is hosting an early stage Warp Index available with the following configur
 
 ```ts
 const index = new WarpIndex({
-  indexUrl: 'https://warp-index.vleap.io',
+  indexUrl: 'https://warp-index.vleap.ai',
 })
 ```
 
-It currently does not require API keys or enforce strict rate limits, but this may change in the future. To stay updated on potential changes, reach out to us on [Telegram](https://telegram.vleap.io).
+It currently does not require API keys or enforce strict rate limits, but this may change in the future. To stay updated on potential changes, reach out to us on [Telegram](https://telegram.vleap.ai).

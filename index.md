@@ -10,8 +10,8 @@ hero:
       text: Read Docs
       link: /introduction/getting-started
     - theme: alt
-      text: Go to vleap.io
-      link: https://vleap.io
+      text: Go to vleap.ai
+      link: https://vleap.ai
 # features:
 #   - title: Feature A
 #     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit

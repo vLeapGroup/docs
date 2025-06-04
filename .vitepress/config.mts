@@ -8,7 +8,7 @@ export default defineConfig({
   cleanUrls: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [{ text: 'vLeap', link: 'https://vleap.io' }],
+    nav: [{ text: 'vLeap', link: 'https://vleap.ai' }],
 
     sidebar: [
       {
