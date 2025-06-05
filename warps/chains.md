@@ -29,6 +29,6 @@ In this example, the Warp executes a contract action on `example-lightspeed-chai
 
 ## Available Chains
 
-- Upcoming.
+- [VibeOX](https://vibeox-explorer.multiversx.com): `vibeox`
 
 To register your LightSpeed chain, please get in touch with us through [Telegram](https://telegram.usewarp.to).
