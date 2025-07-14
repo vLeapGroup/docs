@@ -335,6 +335,29 @@ Indexing starts from 1. Use dot notation to access nested values.
 
 ---
 
+## Transform Results
+
+The `transform` feature lets you compute dynamic results in the `results` object using JavaScript functions. Use it when you need to combine, format, or post-process extracted results.
+
+- **Syntax:** Use `transform:` followed by a JavaScript function as a string. The function receives a `result` object with all previously computed results.
+- **Order:** Transforms are evaluated in order, after all static and input-based results.
+- **Dependencies:** Each transform can use results defined before it (including other transforms). Circular dependencies are not allowed.
+- **Error Handling:** If a transform throws, its result is set to `null`.
+- **Security:** Code runs in a sandboxed environment with access only to the `result` object. Async code is not supported.
+
+**Example:**
+
+```json
+{
+  "results": {
+    "BASE": "out.value",
+    "DOUBLED": "transform:() => { return result.BASE * 2 }"
+  }
+}
+```
+
+---
+
 ## Messages
 
 Messages provide user-facing feedback after Warp execution. Define them using a `messages` object at the root level.
