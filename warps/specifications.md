@@ -1,8 +1,13 @@
 # Warps Specifications
 
-A Warp is a base64-encoded JSON object, known as a **Blueprint**, stored in the `txData` of a transaction on the MultiversX network. The transaction hash acts as the unique identifier for each Warp. The [Registry](./registry.md) can be used to assign aliases for easier sharing.
+A Warp is an encoded JSON object, known as a **Blueprint**, stored onchain of the dedicated blockchain. The transaction hash acts as the unique identifier for each Warp. The [Registry](./registry.md) can be used to assign aliases for easier sharing.
 
 Storing the Warp on the blockchain ensures security and immutability, as its actions cannot be altered once shared.
+
+## Where Warps Are Stored
+
+- **MultiversX:** Warps are stored as smart contract inscriptions in the `txData` field of a transaction on the MultiversX network. The transaction hash of this transaction represents its ID and can be registered in the global Registry smart contract to assign an alias and make it accessible for others.
+- **Sui:** Warps are stored as on-chain objects managed by the Warp Protocol’s SUI smart contracts. The object ID serves as the Warp ID and can also be registered in the global Registry smart contract for aliasing and easier sharing.
 
 ## Warp Blueprint JSON Schema
 
