@@ -30,6 +30,13 @@ export default defineConfig({
           { text: 'Warps vs. Blinks', link: '/warps/comparison.md' },
         ],
       },
+      {
+        text: 'Relay',
+        items: [
+          { text: 'General', link: '/relay/general.md' },
+          { text: 'SDK', link: '/relay/sdk.md' },
+        ],
+      },
     ],
 
     socialLinks: [
