@@ -4,7 +4,7 @@ layout: home
 hero:
   name: 'Docs'
   text: 'by vLeap.'
-  tagline: We are the creators of PeerMe, Tagrity and Spawnable.
+  tagline: We are the creators of PeerMe, JoAi, Tagrity, Spawnable, Warps and vLeap Relay.
   actions:
     - theme: brand
       text: Read Docs
